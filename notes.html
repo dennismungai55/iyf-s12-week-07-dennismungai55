@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f1f5f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        .note {
+            background: white;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .delete-btn {
+            background: #dc2626;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Notes App</h1>
+
+    <textarea id="noteInput" placeholder="Write your note here..."></textarea>
+    <button id="addNoteBtn">Add Note</button>
+
+    <div id="notesList"></div>
+
+    <script src="notes.js"></script>
+</body>
+</html>
