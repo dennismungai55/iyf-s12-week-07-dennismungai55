@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Theme Persistence</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 50px;
+                transition: 0.3s;
+            }
+
+            body.light {
+                background: white;
+                color: #222;
+            }
+
+            body.dark {
+                background: #222;
+                color: white;
+            }
+
+            button {
+                padding: 12px 20px;
+                cursor: pointer;
+                border: none;
+                border-radius: 6px;
+            }
+        </style>
+    </head>
+    <body class="light">
+        <h1>Theme Persistence</h1>
+        <p>Switch between light and dark mode.</p>
+
+        <button id="theme-toggle">Switch Theme</button>
+
+        <script src="day-1-theme-persistence.js"></script>
+    </body>
+</html>

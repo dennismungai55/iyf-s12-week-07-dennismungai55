@@ -6,7 +6,8 @@
     "scripts": {
         "lint": "eslint js/",
         "lint:fix": "eslint js/ --fix",
-        "format": "prettier --write js/"
+        "format": "prettier --write js/",
+        "test": "vitest"
     },
     "repository": {
         "type": "git",
@@ -22,6 +23,7 @@
     "homepage": "https://github.com/dennismungai55/iyf-s12-week-07-dennismungai55#readme",
     "devDependencies": {
         "eslint": "^8.57.1",
-        "prettier": "^3.9.10"
+        "prettier": "^3.9.10",
+        "vitest": "^5.1.0"
     }
 }
