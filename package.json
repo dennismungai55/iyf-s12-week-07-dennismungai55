@@ -1,21 +1,27 @@
 {
-  "name": "iyf-s12-week-07-dennismungai55",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dennismungai55/iyf-s12-week-07-dennismungai55.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/dennismungai55/iyf-s12-week-07-dennismungai55/issues"
-  },
-  "homepage": "https://github.com/dennismungai55/iyf-s12-week-07-dennismungai55#readme"
+    "name": "iyf-s12-week-07-dennismungai55",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "lint": "eslint js/",
+        "lint:fix": "eslint js/ --fix",
+        "format": "prettier --write js/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dennismungai55/iyf-s12-week-07-dennismungai55.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/dennismungai55/iyf-s12-week-07-dennismungai55/issues"
+    },
+    "homepage": "https://github.com/dennismungai55/iyf-s12-week-07-dennismungai55#readme",
+    "devDependencies": {
+        "eslint": "^8.57.1",
+        "prettier": "^3.9.10"
+    }
 }

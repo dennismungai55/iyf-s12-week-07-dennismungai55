@@ -1,9 +1,9 @@
-import { loadTasks, loadFilter, saveFilter } from "./storage.js";
+import { loadTasks, loadFilter, saveFilter } from './storage.js';
 
 // Application state
 export const state = {
     tasks: loadTasks(),
-    filter: loadFilter()
+    filter: loadFilter(),
 };
 
 // Update tasks
@@ -13,7 +13,7 @@ export function setTasks(newTasks) {
 
 // Update filter and save it
 export function setFilter(newFilter) {
-    if (["all", "active", "completed"].includes(newFilter)) {
+    if (['all', 'active', 'completed'].includes(newFilter)) {
         state.filter = newFilter;
         saveFilter(newFilter);
     }

@@ -1,13 +1,8 @@
+import { state, setTasks, setFilter } from './state.js';
 
-import { state, setTasks, setFilter } from "./state.js";
+import { addTask, deleteTask, toggleTask } from './todo-logic.js';
 
-import {
-    addTask,
-    deleteTask,
-    toggleTask
-} from "./todo-logic.js";
-
-import { saveTasks } from "./storage.js";
+import { saveTasks } from './storage.js';
 
 import {
     taskInput,
@@ -15,8 +10,8 @@ import {
     taskList,
     filterButtons,
     clearCompletedButton,
-    renderTasks
-} from "./ui.js";
+    renderTasks,
+} from './ui.js';
 
 // Update the screen
 function updateApp() {
@@ -25,30 +20,30 @@ function updateApp() {
 }
 
 // Add a new task
-taskForm.addEventListener("submit", (event) => {
+taskForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const title = taskInput.value.trim();
 
-    if (title === "") {
-        alert("Please enter a task!");
+    if (title === '') {
+        alert('Please enter a task!');
         return;
     }
 
     setTasks(addTask(state.tasks, title));
 
-    taskInput.value = "";
+    taskInput.value = '';
 
     updateApp();
 });
 
 // Handle delete buttons
-taskList.addEventListener("click", (event) => {
-    const deleteButton = event.target.closest(
-        'button[data-action="delete"]'
-    );
+taskList.addEventListener('click', (event) => {
+    const deleteButton = event.target.closest('button[data-action="delete"]');
 
-    if (!deleteButton) return;
+    if (!deleteButton) {
+        return;
+    }
 
     const id = Number(deleteButton.dataset.id);
 
@@ -58,10 +53,8 @@ taskList.addEventListener("click", (event) => {
 });
 
 // Handle task completion
-taskList.addEventListener("change", (event) => {
-    if (
-        event.target.matches('input[data-action="toggle"]')
-    ) {
+taskList.addEventListener('change', (event) => {
+    if (event.target.matches('input[data-action="toggle"]')) {
         const id = Number(event.target.dataset.id);
 
         setTasks(toggleTask(state.tasks, id));
@@ -71,8 +64,8 @@ taskList.addEventListener("change", (event) => {
 });
 
 // Handle filters
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
+filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
         setFilter(button.dataset.filter);
 
         renderTasks(state.tasks, state.filter);
@@ -80,10 +73,8 @@ filterButtons.forEach(button => {
 });
 
 // Clear completed tasks
-clearCompletedButton.addEventListener("click", () => {
-    setTasks(
-        state.tasks.filter(task => !task.completed)
-    );
+clearCompletedButton.addEventListener('click', () => {
+    setTasks(state.tasks.filter((task) => !task.completed));
 
     updateApp();
 });
